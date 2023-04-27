@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Parse Monero Seed</h1>
+
+  <p>Input QR-Code Text:</label></p>
+  <textarea id="textfeld" name="textfeld" rows="8" cols="100"></textarea>
+  <br>
+
+
+  <input style="height:200px;width:400px" onclick="myFunction()" type="button" value="Submit">
+  <script>
+    function myFunction() {
+      var text = document.getElementById("textfeld").value;
+      text = text.replaceAll('+', ' ');
+      text = text.replace('monero-wallet:?seed=', '');
+      
+      text = text.replace('&height=', '\n\n');
+      document.getElementById("w3review").value = text;
+    }
+    </script>
+    </body>
+</html>
